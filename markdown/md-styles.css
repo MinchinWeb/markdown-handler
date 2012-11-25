@@ -1,47 +1,118 @@
-﻿* {
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+@import url(http://fonts.googleapis.com/css?family=Vollkorn:400,400italic,700,700italic&subset=latin);
+
+html, body {
+        padding:1em;
+        margin:auto;
+        max-width:50em;
+        background: snow;
+	}
+body {
+	font: 1.3em "Vollkorn", Palatino, Times;
+	color: #333;
+	line-height: 1.4;
+	text-align: justify;
+	}
+header, nav, article, footer {
+	width: 700px;
+	margin:0 auto;
+	}
+article {
+	margin-top: 4em;
+	margin-bottom: 4em;
+	min-height: 400px;
+	}
+footer {
+	margin-bottom:50px;
+	}
+video {
+	margin: 2em 0;
+	border:1px solid #ddd;
+	}
+
+nav {
+	font-size: .9em;
+	font-style: italic;
+	border-bottom: 1px solid #ddd;
+	padding: 1em 0;
+	}
+nav p {
+	margin: 0;
+	}
+
+#contentsWrapper {
+	position: absolute;
+	top: 1.5em;
+	left: -319px;
+	margin-left: 0.25em;
+	height: 100%;
 }
 
-body {
-    max-width: 50em;
-    margin: 0 auto;
-    color: #111;
-	background: #fffafa; 
+#contentsWrapper.fixed {
+	position: fixed;
+	top: 1.5em;
 }
+#contentsTab
+{
+    position: relative;
+    top: 2.25em;
+    left: -1.45em;
+    border-bottom: none;
+    background-color: blanchedAlmond;
+    color: black;
+    float: left;
+    margin: 0px;
+    padding: 0.5em 0.5em 0.25em 0.5em;
+    text-align: center;
+    -webkit-transform: rotate(90deg);
+       -moz-transform: rotate(90deg);
+    -webkit-border-radius: 6px 6px 0px 0px;
+       -moz-border-radius: 6px 6px 0px 0px;
+            border-radius: 6px 6px 0px 0px;
+}
+
+#contents{
+	position: relative;
+	float: left;
+	border: 2px solid #AF9EA8;
+	font-size: 60%;
+	padding: 0 0.5em;
+	max-width: 300px;
+	border-radius: .6em;
+	overflow: hidden;
+	background-color: snow;
+	-webkit-border-radius: .6em;
+	   -moz-border-radius: .6em;
+                border-radius: .6em;
+}
+
+#contents div {
+	margin: 10px 0;
+}
+
+
+/* Typography
+-------------------------------------------------------- */
 
 pre, code {
-    font-family: Monaco, Courier New, monospace;
-    font-size: 11px;
+	font-family: "Consolas", "Menlo", "Monaco", monospace, serif;
+	font-size: .9em;
 }
 
 h1 {
-    font-size: 45px;
-    font-weight: 100;
-    letter-spacing: -1px;
-    margin-bottom: -5px;
-}
-h1 code {
-    font-size: 40px;
-}
-
+	margin-top: 0;
+	font-weight: normal;
+	}
 h2 {
-    color: rgb(43,105,145);
-    font-weight: bold;
-    margin-bottom: -5px;
-}
-h2 code {
-    font-size: 22px;
-}
-
+	font-weight: normal;
+	}
 h3 {
-    margin-bottom: -5px;
-}
-h3 code {
-    font-size: 16px;
-}
+	font-weight: normal;
+	font-style: italic;
+	margin-top:3em;
+	}
 
 a {
-    color: blue;
+    color: #2484c1;
     text-decoration: none;
 }
 a:visited {
@@ -51,19 +122,82 @@ a:hover {
     text-decoration: underline;
 }
 
+a img {
+	border:none;
+	}
+h1 a, h1 a:hover {
+	color: #333;
+	text-decoration: none;
+	}
+
 pre {
     border-width: 1px;
     border-color: #777;
     border-style: solid;
+    border-radius: 10px;
+    -moz-border-radius: 10px;	
     padding: 0.5em;
     background-color: #111;
     overflow: auto;
     color: #CCC;
 }
 
+pre code {
+    background-color: #111;
+}
+
+code {
+    background-color: #F0E8E8;
+    padding: 3px;
+    border-radius: 6px;
+    -moz-border-radius: 6px;	
+}
+
 p, li {
-    font-size: 13px;
-    line-height: 18px;
+    font-size: 1em;
+    line-height: 1.1em;
+}
+
+table {
+    margin-top: 1em;
+    background: #f6f6f6;
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 5px 10px 5px;
+}
+
+thead {
+    background: #e6e6e6;
+    text-align: left;
+}
+
+th, td {
+    border: 1px solid #ccc;
+}
+
+#toc h2 {
+    cursor: pointer;
+    border-bottom: 2px solid #AF9EA8;
+    text-align: center;    
+}
+
+li.H2 {
+    margin-left: 1em;
+}
+li.H3 {
+    margin-left: 2em;
+}
+li.H4 {
+    margin-left: 3em;
+}
+li.H5 {
+    margin-left: 4em;
+}
+li.H6 {
+    margin-left: 5em;
 }
 
 /* Two Column */
@@ -138,3 +272,29 @@ h1+h2, h2+h3, hr+h2, hr+h3,
 dl+hr				{margin-top: -19px;}
 section, figure			{/* required to get the diamond to inherit a background */
 				 background-color: white;}
+/* iPad
+-------------------------------------------------------- */
+@media only screen and (max-device-width: 1024px) {
+body {
+	font-size: 120%;
+	line-height: 1.4;
+	}
+} /* @iPad */
+
+/* iPhone
+-------------------------------------------------------- */
+@media only screen and (max-device-width: 480px) {
+body {
+	text-align: left;
+	}
+article, footer {
+	width: auto;
+	}
+article {
+	padding: 0 10px;
+	}
+#contents {
+	display: none;
+	}
+} /* @iPhone */
+

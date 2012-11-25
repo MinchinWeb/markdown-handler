@@ -6,10 +6,9 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo str_replace(basename(__FILE__), 'md-styles.css', $_SERVER['SCRIPT_NAME']); ?>">
 	<?php echo "<title>", basename(realpath($_SERVER['PATH_TRANSLATED'])), "</title>"; ?>
 	
-	<script type="text/javascript"
-		src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-	</script>
-
+	<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="<?= dirname($_SERVER['SCRIPT_NAME']) ?>/markdown.js"></script>
   </head>
   <body>
 <?php

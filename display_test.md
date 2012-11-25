@@ -1,5 +1,6 @@
+<div id="contents"></div>
 # Markdown Display Test #
-**v1.1.2, November 13, 2012**
+**v1.1.3, November 22, 2012**
 
 This file serves three purposes:  
 1) a markdown language reference,  
@@ -7,6 +8,14 @@ This file serves three purposes:
 3) a place to test out changes to the accompaning CSS file.
 
 Let us begin:
+
+# Contents
+Include an empty div with `id="contents"` at start of file to have a floating 
+table of contents automatically generated. eg:
+~~~
+	<div id="contents"></div>
+~~~
+The Table of Contents div scrolls down with the page and is generated from headers.
 
 # Headers
 
@@ -129,7 +138,7 @@ As a bonus, email addresses are automatically obscured.
 
 # Lists #
 
-Use *, -, or - to create a list. Use numbers to create a numbered list.
+Use *, +, or - to create a list. Use numbers to create a numbered list.
 
 	* Bullet lists are easy too
 	- Another one
@@ -149,7 +158,7 @@ Use *, -, or - to create a list. Use numbers to create a numbered list.
 
 # Code #
 
-Code can be indented for marked off with ~~~ above and below the block.
+Code can be indented or marked off with ~~~ above and below the block.
 
     // Code is just text indented a bit
     which(is_easy) to_remember();
@@ -180,6 +189,12 @@ Use `<div>` tags
 * * * *
 ****
 - - -
+
+Paragraphs following a horizontal rule will have a drop cap for the first
+character. Cum sociis natoque penatibus et magnis dis parturient montes, 
+nascetur ridiculus mus. Mauris quis augue tortor, in accumsan urna. Sed 
+vestibulum, augue at commodo ultricies, leo libero faucibus lorem, nec 
+porta eros massa quis nunc.
 
 # Tables (Markdown-Plus) #
 
@@ -368,6 +383,8 @@ dignissim at. Sed ut eros est.
 Maecenas dictum sodales leo in sagittis. Sed ullamcorper enim nec ligula tempus
 eu gravida enim laoreet. Nunc eu feugiat erat.
 
+ ***
+
 Morbi interdum, nisl at fringilla
 semper, magna lorem laoreet neque, ac posuere risus diam et odio. Mauris iaculis
 aliquet augue, vel ullamcorper massa rutrum pulvinar. Curabitur nisi orci,
@@ -381,15 +398,6 @@ lectus, sed facilisis urna aliquam non. Nulla facilisi.
 Aenean at tellus velit. Aliquam eleifend cursus posuere. Sed semper, justo
 lacinia pharetra ultricies, nulla purus tincidunt enim, non pretium odio ante
 eget velit. Cras luctus dolor vitae eros mattis hendrerit.
-
-Cum sociis natoque
-penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris quis
-augue tortor, in accumsan urna. Sed vestibulum, augue at commodo ultricies, leo
-libero faucibus lorem, nec porta eros massa quis nunc.
-
-Nunc fermentum consequat
-ultricies. Quisque eu arcu ipsum. Donec sollicitudin sapien ut metus pretium non
-lacinia lacus volutpat. Aliquam erat volutpat.
 
 Vivamus quis erat nec tellus
 vehicula placerat. Class aptent taciti sociosqu ad litora torquent per conubia
